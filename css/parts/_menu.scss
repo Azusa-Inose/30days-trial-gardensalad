@@ -1,0 +1,523 @@
+.menu {
+    background: $base-color;
+    padding: 4.5rem;
+    @include mq('tb') {
+        padding: 2.5rem;
+    }
+    @include mq('sp') {
+        padding: 1.5rem 1rem;
+    }
+    @include mq('sm') {
+        padding: 1rem .5rem;
+    }
+    .menu__outer {
+        border: 2px solid #fff;
+        @include mq('tb') {
+            padding: .5rem;
+        }
+        @include mq('sp') {
+            padding: 0 21px;
+        }
+        @include mq('sm') {
+            padding: 0 8px;
+        }
+        .menu__inner {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding-top: 120px;
+            @include mq('sp') {
+                padding-top: 2rem;
+            }
+            .section-title h3 {
+                color: #fff;
+                @include mq('sp') {
+                    font-size: 2rem;
+                    &::after {
+                        top: 78px;
+                    }
+                }
+                span {
+                    color: #fff;
+                }
+            }
+            .section-title h3 {
+                padding-bottom: 60px;
+                @include mq('sp') {
+                    padding-bottom: 68px;
+                }
+            }
+            h3::after {
+                background: #fff;
+            }
+        }
+    }
+}
+
+
+.nutrients-top {
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        color: #fff;
+        @include mq('sp') {
+            font-size: 1rem;
+        }
+        @include mq('sm') {
+            font-size: 12px;
+        }
+        .nutrient {
+            display: inline-block;
+            margin-right: 22px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.menu__item-wrap {
+
+    .menu__item:first-child {
+        display: block;
+        margin-top: 118px;
+        @include mq('sp') {
+            margin-top: 310px;
+        }
+        .menu__item-inner {
+            position: relative;
+            .menu__img {
+                position: absolute;
+                bottom: -1.5rem;
+                left: 152px;
+                z-index: 20;
+                @include mq('tb') {
+                    left: 0;
+                    bottom: 0;
+                }
+                @include mq('sp') {
+                    top: -255px;
+                }
+                img {
+                    width: 451px;
+                    height: auto;
+                    @include mq('tb') {
+                        // width: 350px;
+                        width: 56.4%;
+                    }
+                    @include mq('sp') {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    
+    .menu__item.bottom {
+        width: 48.51%;
+        display: inline-block;
+        margin-right: 2.6%;
+        
+        @include mq('tb') {
+            margin-right: 2.3%;
+        }
+        @include mq('sp') {
+            width: 100%;
+            margin-right: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        .menu__item-inner {
+            position: relative;
+            .menu__img {
+                position: absolute;
+                bottom: 210px;
+                left: 44px;
+                z-index: 20;
+                @include mq('tb') {
+                    left: 30px;
+                    bottom: 188px;
+                }
+                @include mq('sp') {
+                    left: 0;
+                    bottom: 164px;
+                }
+                img {
+                    width: 418px;
+                    height: auto;
+                    @include mq('tb') {
+                        width: 86.4%;
+                    }
+                    @include mq('sp') {
+                        width: 100%;
+                    }
+                }
+            }
+            .menu__block {
+                width: 100%;
+                height: 280px;
+                margin-top: 440px;
+                background: $main-color;
+                @include mq('tb') {
+                    margin-top: 280px;
+                }
+                @include mq('sp') {
+                    height: 223px;
+                    margin-top: 310px;
+                }
+                .menu__name  {
+                    padding-top: 64px;
+                    @include mq('sp') {
+                        padding-top: 44px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu__block {
+    width: 52.31%;
+    height: 367px;
+    margin-left: auto;
+    position: relative;
+    padding: 13px;
+    background: $main-color;
+    @include mq('tb') {
+        height: 300px;
+    }
+    @include mq('sp') {
+        width: 300px;
+        height: 323px;
+        z-index: 19;
+    }
+    @include mq('sm') {
+        width: 284px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 26px);
+        height: calc(100% - 26px);
+        top: 13px;
+        left: 13px;
+        display: block;
+        border: 1px solid $font-color;
+        @include mq('sp') {
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            top: 10px;
+            left: 10px;
+        }
+    }
+    &-inner {
+        position: relative;
+        text-align: center;
+        .menu__recommend {
+            position: absolute;
+            display: inline-block;
+            color: #fff;
+            background-color: $accent-color;
+            padding: 9px 52px 18px;
+            z-index: 20;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include mq('tb') {
+                padding: 6px 20px 12px;
+            }
+            @include mq('sp') {
+                width: 78%;
+                padding: 43px 45px 18px;
+            }
+            .recommend-en {
+                font-size: 14px;
+                font-family: $decoration-font;
+                @include mq('tb') {
+                    font-size: 12px;
+                }
+            }
+            .recommend-ja {
+                font-size: 1.5rem;
+                margin-top: 8px;
+                @include mq('tb') {
+                    margin-top: 8px;
+                    font-size: 18px;
+                }
+                @include mq('sp') {
+                    margin-top: 6px;
+                }
+            }
+        }
+
+        .menu__name {
+            padding-top: 94px;
+            font-size: 30px;
+            line-height: (43/30);
+            letter-spacing: .1em;
+            font-weight: 700;
+            @include mq('tb') {
+                font-size: 24px;
+                padding-top: 60px;
+            }
+            @include mq('sp') {
+                padding-top: 108px;
+                line-height: (45/30);
+            }
+        }
+        .menu__price {
+            display: inline-block;
+            font-size: 40px;
+            font-family: $font-family-en;
+            letter-spacing: .1em;
+            margin-top: 22px;
+            margin-left: 2rem;
+            @include mq('tb') {
+                font-size: 30px;
+            }
+            @include mq('sp') {
+                margin-top: 20px;
+            }
+            .menu__price-yen {
+               color: $font-color;
+               font-size: 1.5rem;
+               @include mq('tb') {
+                   font-size: 1rem;
+               }
+            } 
+            .menu__price-tax {
+               color: $font-color;
+               font-family: $font-family-ja;
+               font-size: 18px;
+               letter-spacing: .1em;
+           }
+        }
+        .menu__nutrients {
+            font-size: 1.5rem;
+            letter-spacing: .03em;
+            margin-top: 34px;
+            @include mq('tb') {
+                font-size: 14px;
+                margin-top: 1.5rem;
+            }
+            @include mq('sm') {
+                font-size: 12px;
+            }
+            .menu__nutrients-inline {
+                display: inline-block;
+                margin-right: 1rem;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/******************************************************************
+# instragram
+******************************************************************/
+.menu__instagram-wrap {
+    margin-top: 80px;
+    background: $main-color;
+    margin-bottom: 100px;
+    @include mq('tb') {
+        margin-bottom: 0;
+    }
+    @include mq('sp') {
+        margin: 48px 0 21px;
+    }
+    @include mq('sm') {
+        margin-bottom: 8px;
+    }
+    .menu__instagram-inner {
+        position: relative;
+        padding: 13px;
+        @include mq('sp') {
+            padding: 10px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            border: 1px solid $font-color;
+            width: calc(100% - 26px);
+            height: calc(100% - 26px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @include mq('sp') {
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+}
+
+.instagram__title {
+    position: absolute;
+    display: inline-block;
+    background: $accent-color;
+    color: #fff;
+    font-family: $font-family-en;
+    font-weight: normal;
+    letter-spacing: .05em;
+    font-size: 30px;
+    width: 360px;
+    height: 73px;
+    line-height: 73px;
+    text-align: center;
+    z-index: 20;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq('sp') {
+        font-size: 1.5rem;
+        width: 185px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
+
+.instagram__text {
+    text-align: center;
+    padding-top: 96px;
+    position: relative;
+    @include mq('sp') {
+        font-size: 1rem;
+        text-align: justify;
+        line-height: (23/16);
+        width: 84.5%;
+        margin: 0 auto;
+        letter-spacing: .05em;
+        padding-top: 64px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        width: 36px;
+        border: 1px solid $font-color;
+        transform: rotate(54.09deg);
+        left: 21.63%;
+        top: 92.1%;
+        @include mq('tb') {
+            border: none;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 36px;
+        border: 1px solid $font-color;
+        transform: matrix(-0.59, 0.81, 0.81, 0.59, 0, 0);
+        right: 21.63%;
+        top: 92.1%;
+        @include mq('tb') {
+            border: none;
+        }
+    }
+}
+
+.instagram__item-wrap {
+    margin-top: 36px;
+    padding: 36px 42px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @include mq('sp') {
+        flex-wrap: wrap;
+        padding: 0 7px 0;
+        margin-top: 1.5rem;
+    }
+
+    .instagram__iten-inner {
+        width: 100%;
+        z-index: 20; // ::afterが上に被ってスクロールできないので追記
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        @include mq('sp') {
+            white-space: normal;
+        }
+    }
+    
+    .instagram__item {
+        display: inline-block;
+        margin-right: 12px;
+        width: 231px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include mq('sp') {
+            // width: 125px;
+            width: calc(50% - 6.5px);
+            height: auto;
+            margin-bottom: 10px;
+            margin-right: 8px;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+        img {
+        }
+    }
+}
+
+.instagram__id {
+    margin-top: 10px;
+    text-align: center;
+    @include mq('sp') {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}
+
+.instagram__btn {
+    margin-top: 26px;
+    margin-bottom: 1.5rem;
+    a {
+        z-index: 20;
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
+        color: $font-color;
+        font-weight: 700;
+        border: 1px solid $font-color;
+        width: 300px;
+        height: 56px;
+        line-height: 56px;
+        text-align: center;
+        letter-spacing: .03em;
+        position: relative;
+        padding-right: 20px;
+        @include mq('sp') {
+            width: 260px;
+        }
+        @include mq('sm') {
+            width: 230px;
+        }
+        &::after {
+            content: url('../img/radix-icons_external-link.png');
+            position: absolute;
+            right: 30px;
+            top: 6px;
+            @include mq('sp') {
+                right: 1rem;
+            }
+        }
+        &:hover::after {
+            content: url('../img/radix-icons_external-link-hover.png');
+        }
+    }
+}

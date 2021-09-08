@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+/******************************************************************
+# reset
+******************************************************************/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, small, button, time, figure {
+    border: 0;
+    font: inherit;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+  
+  html {
+    line-height: 1;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  li, dd {
+    list-style-type: none;
+  }
+  
+  header, footer, nav, section, article, aside, figure, figcaption {
+    display: block;
+  }
+  
+  img {
+    border: none;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden; // imgに対して速攻でぼやけを回避
+    backface-visibility: hidden;
+  }
+  
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+    }
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    word-break: break-all;
+    max-width: 100%;
+}
+
+
+/******************************************************************
+# base
+******************************************************************/
+
+// font-family
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Serif+JP:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+@import url("https://use.typekit.net/yqp8for.css");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+$font-family-ja: 'Noto Sans JP', sans-serif;
+$font-family-en: 'reross-quadratic', sans-serif;
+$decoration-font: 'Satisfy', 'cursive';
+
+// color
+$base-color: #2F2F2F;
+$main-color: #F2F2F2;
+$accent-color: #159741;
+$font-color: #333;
+
+
+// inner, media query
+$layout-width-inner: 1080px;
+$breakpoints: (
+    "sm": "screen and (max-width: 374px)",
+    "sp": "screen and (max-width: 767px)",
+    "tb": "screen and (max-width: #{$layout-width-inner - 1px})",
+    "pc": "screen and (max-width: #{$layout-width-inner})",
+    // "lg": "screen and (min-width: 1141px)",
+    ) !default;
+    
+    @mixin mq($breakpoint: pc) {
+        @media #{map-get($breakpoints, $breakpoint)} {
+            @content;
+        }
+    }
+
+
+
+/******************************************************************
+# common css
+******************************************************************/
+body {
+    font-family: $font-family-ja;
+    font-size: 18px;
+    // color: $font-color;
+    font-weight: 400;
+}
+
+.inner {
+    max-width: $layout-width-inner;
+    margin: 0 auto;
+    box-sizing: content-box;
+    @include mq('sp') {
+    // 設定する！
+      max-width: 310px;
+    }
+}
+
+// 画像切り替え
+.only-pc {
+  @include mq('sp') {
+      display: none;
+  }
+}
+.c_only-pc {
+  display: block;
+  @include mq('tb') {
+    display: none;
+  }
+}
+.only-tb {
+  display: none;
+  @include mq('tb') {
+    display: inline-block;
+  }
+}
+.only-sp {
+  display: none;
+  @include mq('sp') {
+      display: inline-block;
+  }
+}
+
+// セクションタイトル
+.section-title {
+  h3 {
+    font-family: $font-family-en;
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+    padding-bottom: 4.5rem;
+    color: $font-color;
+    @include mq('sp') {
+      font-size: 2rem;
+      padding-top: 30px;
+    }
+    @include mq('sm') {
+      padding-bottom: 2rem;
+    }
+    span {
+      color: $accent-color;
+      position: absolute;
+      font-family: $font-family-ja;
+      font-size: 18px;
+      letter-spacing: .05em;
+      font-weight: 700;
+      top: -36px;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+      @include mq('sp') {
+        font-size: 14px;
+        top: 0px;
+      }
+    }
+  
+    // ボーダー装飾
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background: $accent-color;
+      top: 73px;
+      left: 50%;
+      transform: translateX(-50%);
+      @include mq('sp') {
+        top: 75px;
+      }
+    }
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: $font-color;
+  color: #fff;
+  opacity: 1;
+  &::after {
+    color: #fff;
+  }
+}

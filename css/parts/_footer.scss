@@ -1,0 +1,125 @@
+.footer {
+    background: $main-color;
+}
+
+.footer__sns-wrap {
+    padding-top: 56px;
+    display: flex;
+    justify-content: center;
+    @include mq('sp') {
+        padding-top: 48px;
+    }
+    .circle {
+        display: inline-block;
+        position: relative;
+        background: $base-color;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #fff;
+        margin-right: 40px;
+        border: 1px solid $base-color;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            background: #fff;
+            color: $base-color;
+            border: 1px solid $base-color;
+            opacity: 1; 
+            i {
+                color: $base-color;
+                transition: 0s all;
+            }
+        }
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-weight: 900;
+            color: #fff;
+        }
+        @include mq('sp') {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.footer__menu-wrap {
+    padding-top: 40px;
+    .footer__menu {
+        text-align: center;
+        .footer__menu-item {
+            display: inline-block;
+            font-family: $font-family-en;
+            font-size: 18px;
+            margin-right: 40px;
+            @include mq('sp') {
+                font-size: 1rem;
+                margin-right: 2rem;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                color: $font-color;
+            }
+        }
+    }
+}
+
+.footer__logo {
+    text-align: center;
+    padding-top: 36px;
+    @include mq('sp') {
+        padding-top: 42px;
+        img {
+            width: 165px;
+            height: auto;
+        }
+    }
+}
+
+.footer__copyright {
+    font-size: 12px;
+    color: $font-color;
+    text-align: center;
+    padding: 22px 0 9px;
+    @include mq('sp') {
+        padding: 31px 0 10px;
+    }
+}
+
+
+/******************************************************************
+# pagetopボタン
+******************************************************************/
+.floating {
+    display: block;
+    position: fixed;
+    bottom: 272px;
+    right: 12.5%;
+    z-index: 30;
+    @include mq('sp') {
+        right: 4.25%;
+        bottom: 90px;
+    }
+    a {
+        display: block;
+        &:hover {
+            opacity: 1  ;
+        }
+        img {
+            @include mq('tb') {
+                width: 80px;
+                height: 80px;
+            }
+            @include mq('sp') {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}

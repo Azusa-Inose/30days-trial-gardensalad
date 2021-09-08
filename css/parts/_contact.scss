@@ -1,0 +1,317 @@
+.contact {
+    padding: 130px 0;
+    background-image: url('../img/vegetable.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @include mq('sp') {
+        padding: 66px 1rem 64px;
+    }
+    .contact__inner {
+        max-width: 55.55%;
+        margin: 0 auto;
+        @include mq('tb') {
+            max-width: 720px;
+        }
+    }
+}
+
+.contact__wrap {
+    background: $main-color;
+    padding: 105px 140px 72px;
+    color: $font-color;
+    @include mq('sp') {
+        padding: 66px 1rem 64px;
+    }
+    .section-title h3 {
+        padding-bottom: 58px;
+    }
+}
+
+.contact__text {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 48px;
+    @include mq('sp') {
+        padding-top: 12px;
+        text-align: left;
+        letter-spacing: .03em;
+        line-height: (23/16);
+    }
+}
+
+
+.contact-content-item {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .inline-required {
+        display: inline-block;
+        font-size: 12px;
+        background: $accent-color;
+        color: #fff;
+        border-radius: 6px;
+        width: 39px;
+        height: 21px;
+        line-height: 20px;
+        text-align: center;
+        margin-left: 20px;
+        @include mq('sp') {
+            margin-left: 10px;
+        }
+    }
+}
+
+.dt-title {
+    margin-bottom: 5px;
+    font-size: 1.125em;
+    @include mq('sp') {
+        font-size: 1rem;
+    }
+}
+
+.dd-data {
+    display: inline-block;
+    width: 100%;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    display: inline-block;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid $base-color;
+    border-radius: 0;
+    color: $font-color;
+    font-family: inherit;
+    font-size: 1em;
+    padding: .75em 1.4375em;
+    @include mq('sp') {
+        padding: 1em 1.0625em;
+    }
+}
+::placeholder {
+    color: #BDBDBD;
+}
+/* 旧Edge対応 */
+::-ms-input-placeholder {
+    color: orange;
+}
+  /* IE対応 */
+  :-ms-input-placeholder {
+    color: orange;
+}
+
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
+    border: 1px solid $accent-color;
+    box-shadow: 0 0 5px $accent-color;
+}
+
+textarea.contact-textarea {
+    height: 10em;
+}
+
+.contact-privacypolicy-wrap {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-checkbox {
+
+    .contact-checkbox-input {
+        display: none;
+    }
+    
+    .contact-checkbox-input + .contact-checkbox-part  {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 0 0 1.2em;
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part::before {
+        -webkit-transform: translateY(-50%);
+        background: #fff;
+        border: 1px solid #707070;
+        content: "";
+        display: block;
+        height: 30px;
+        left: -100%;
+        position: absolute;
+        top: -8px;
+        transform: translateY(-50%);
+        width: 30px;
+        @include mq('sm') {
+            width: 26px;
+            height: 26px;
+            left: -50%;
+        }
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part::after {
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+        border-bottom: 2px solid $accent-color;
+        border-left: 2px solid $accent-color;
+        content: "";
+        display: block;
+        height: 8px;
+        left: -50%;
+        margin-top: -4px;
+        opacity: 0;
+        position: absolute;
+        top: -50%;
+        transform: translateY(-100%) rotate(-45deg);
+        transition: all 0.3s ease 0s;
+        width: 14px;
+        @include mq('sm') {
+            left: -25%;
+        }
+    }
+
+    .contact-checkbox-input:checked + .contact-checkbox-part::after {
+        opacity: 1;
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part:hover {
+        &::before {
+            border: 1px solid $accent-color;
+            box-shadow: 0 0 5px $accent-color;
+        }
+    }
+
+    .contact-checkbox-input + .contact-checkbox-part:active {
+        &::before {
+            border: 1px solid $accent-color;
+            background-color: $accent-color;
+        }
+    }
+
+    
+}
+
+
+
+
+.spanrivacypolicy-text {
+    font-size: 18px;
+    @include mq('sp') {
+        font-size: 1rem;
+    }
+    @include mq('sm') {
+        font-size: 14px;
+    }
+    .privacypolicy-inline {
+        display: inline-block;
+        color: $accent-color;
+        border-bottom: 1px solid $accent-color;
+        @include mq('sm') {
+            font-size: 14px;
+        }
+    }
+}
+
+.contact-submit-btn-wrap {
+    margin-top: 42px;
+    text-align: center;
+    .contact-submit-btn {
+        display: inline-block;
+        width: 239px;
+        height: 56px;
+        line-height: 56px;
+        color: #fff;
+        background: #BDBDBD;
+        font-size: 18px;
+        border: none;
+        @include mq('sp') {
+            width: 100%;
+        }
+    }
+}
+.-active {
+    .contact-submit-btn {
+        background: $accent-color;
+        &:hover {
+            opacity: .7;
+            transition: all .3s;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/******************************************************************
+# modal
+******************************************************************/
+.modal {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    display: none;
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,.8);
+        z-index: -1;
+    }
+    &__content {
+        padding: 38px 48px;
+        margin: 45px auto;
+        background: #fff;
+        width: 64.5%;
+        height: 90%; // 高さを指定すると中身が超えた分はスクロールできるように;
+        top: 50%;
+        left: 50%;
+        overflow-y: scroll;
+        @include mq('tb') {
+            width: 70%;
+            padding: 26px 2rem;
+        }
+        &-text {
+            font-size: 1rem;
+            @include mq('tb') {
+                font-size: 14px;
+            }
+            p {
+                margin-bottom: 2rem;
+                line-height: (24/16);
+            }
+            .modal__content-bold {
+                font-size: 18px;
+                font-weight: 700;
+                @include mq('tb') {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.modal-close {
+    text-align: right;
+    button {
+        background: #fff;
+    }
+}
+
+.modal {
+    .section-title {
+        h3 {
+            font-size: 1.5rem;
+            span {
+                font-size: 12px;
+            }
+            &::after {
+                width: 40px;
+                top: 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.intro {
+    background: $base-color;
+    padding: 120px 0 110px;
+    position: relative;
+    overflow: hidden;
+    @include mq('sp') {
+        padding: 48px 0 64px;
+    }
+    &::after {
+        content: 'Garden Salald';
+        position: absolute;
+        font-size: 280px;
+        color: rgba(103, 103, 103, 0.3);
+        top: 302px;
+        left: -42px;
+        overflow: hidden;
+        font-family: $font-family-en;
+        @include mq('tb') {
+            font-size: 200px;
+            top: 370px;
+            left: -120px;
+        }
+        @include mq('sp') {
+            font-size: 110px;
+            content: 'Garden\ASalald';
+            white-space: pre;
+            text-align: right;
+            top: 280px;
+            right: 0;
+        }
+    }
+}
+
+.intro__inner {
+    text-align: center;
+}
+
+.intro__title {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 3rem;
+    @include mq('sp') {
+        font-size: 20px;
+        line-height: (30/20);
+        margin-bottom: 23px;
+    }
+}
+
+.intro__text-wrap {
+    p {
+        color: #fff;
+        line-height: (27/18);
+        margin-bottom: 24px;
+        @include mq('sp') {
+            font-size: 1rem;
+            letter-spacing: .03em;
+            line-height: (24/16);
+        }
+    }
+}

@@ -1,0 +1,197 @@
+.about {
+    padding: 130px 0 96px;
+    background: $main-color;
+    @include mq('sp') {
+        padding: 65px 0 10px;
+    }
+}
+
+.about__inner {
+    @include mq('tb') {
+        max-width: 720px;
+    }
+    @include mq('sp') {
+        max-width: 343px;
+    }
+    @include mq('sm') {
+        max-width: 300px;
+    }
+}
+
+.about__item-wrap {
+    padding-top: 35px;
+    @include mq('sp') {
+        padding-top: 8px;
+    }
+    ul {
+        .about__item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 58px;
+            @include mq('sp') {
+                flex-direction: column-reverse;
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                @include mq('sp') {
+                    flex-direction: column-reverse;
+                }
+
+                // 背景の数値の装飾
+                &::after {
+                    content: '02';
+                    position: absolute;
+                    font-size: 288px;
+                    letter-spacing: .06em;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-family: $font-family-en;
+                    left: 217px;
+                    z-index: 3;
+                    @include mq('tb') {
+                        font-size: 210px;
+                        left: 120px;
+                    }
+                    @include mq('sp') {
+                        font-size: 180px;
+                        top: 60px;
+                        right: 0;
+                        letter-spacing: 0;
+                    }
+                    @include mq('sm') {
+                        top: 95px;
+                        left: 90px;
+                    }
+                }
+                
+                .about__text-wrap {
+                    padding-right: 190px;
+                    @include mq('tb') {
+                        padding-right: 80px;
+                    }
+                    @include mq('sp') {
+                        padding-right: 0;
+                    }
+                    .about__text {
+                        width: 89%;
+                        @include mq('sp') {
+                            width: 95.9%;
+                            margin: 0 auto 34px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                // 背景の数値の装飾
+                &::after {
+                    content: '01';
+                    position: absolute;
+                    font-size: 288px;
+                    letter-spacing: .06em;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-family: $font-family-en;
+                    right: -5px;
+                    z-index: 3;
+                    @include mq('tb') {
+                        font-size: 210px;
+                    }
+                    @include mq('sp') {
+                        font-size: 180px;
+                        top: 26px;
+                        right: 0;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+            
+            &:nth-child(3) {
+                // 背景の数値の装飾
+                &::after {
+                    content: '03';
+                    position: absolute;
+                    font-size: 288px;
+                    letter-spacing: .06em;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-family: $font-family-en;
+                    right: -5px;
+                    z-index: 3;
+                    @include mq('tb') {
+                        font-size: 210px;
+                    }
+                    @include mq('sp') {
+                        font-size: 180px;
+                        top: 0;
+                        right: 0;
+                        letter-spacing: 0;
+                    }
+                    @include mq('sm') {
+                        top: 60px;
+                    }
+                }
+            }
+            
+            &:nth-child(odd) {
+                .about__text-wrap {
+                    padding-left: 70px;
+                    @include mq('sp') {
+                        padding-left: 0;
+                    }
+                    .about__text {
+                        width: 71%;
+                        @include mq('tb') {
+                            width: 80%;
+                        }
+                        @include mq('sp') {
+                            width: 95.9%;
+                            margin: 0 auto 34px;
+                        }
+                    }
+                }
+            }
+
+            img {
+                width: 41.66%;
+                height: auto;
+                @include mq('sp') {
+                    width: 100%;
+                }
+            }
+            .about__text-wrap {
+                color: $font-color;
+                font-family: $font-family-ja;
+                z-index: 5;
+                .about__title {
+                    font-size: 30px;
+                    font-weight: 700;
+                    letter-spacing: .05em;
+                    margin-bottom: 1.5rem;
+                    line-height: (43/30);
+                    @include mq('tb') {
+                        font-size: 1.5rem;
+                        letter-spacing: 0;
+                    }
+                    @include mq('sp') {
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        line-height: 1.5;
+                    }
+                    @include mq('sm') {
+                        font-size: 21px;
+                    }
+                    span {
+                        color: $accent-color;
+                    }
+                }
+                .about__text {
+                    letter-spacing: .03em;
+                    text-align: justify;
+                    line-height: (27/18);
+                    @include mq('tb') {
+                        font-size: 1rem;
+                    }
+                }   
+            }
+        }
+    }
+}
