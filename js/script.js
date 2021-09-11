@@ -69,14 +69,3 @@ jQuery(function(){
         }
     });
 })
-
-
-
-
-    // activeなglobal menuにスタイルをつける
-    // $('.header-nav-list .header-nav-item .header-nav-link').click(function() {
-    //     $('.header-nav-list .header-nav-item .header-nav-link').removeClass('menu-active');
-    //     $(this).addClass('menu-active');
-    //     return false;
-    //   });
-    
